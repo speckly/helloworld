@@ -2,4 +2,4 @@
 
 ## This is a joke repository
 
-I take down all my JS notes in one file, the same one i used to print hello world
+I take down all my JS notes in a very wacky way, to enhance my learning in JS. 
