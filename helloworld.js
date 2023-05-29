@@ -67,7 +67,7 @@ function f1(){
     pp = function(){console.log("kitty has finished terrorism")}
     //stinky mistake
     //traceback, callback was defined as pp => funct, but pp is used like a lambda argument?
-    setTimeout(pp, 2000)
+    setTimeout(pp, 500)
 }
 function f2(){
     console.log("catty is being executed first and predicts that in approximately 2000 milliseconds you will explode")
@@ -83,7 +83,18 @@ numbers.forEach(myFunction)
 
 //readsync
 const fs = require('fs')
+const nya = require("./necosfx")
+const { callbackify } = require("util")
 const content = fs.readFileSync('system32', 'utf-8')
+if (content == ""){
+    fs.writeFile('system32','balls', err => {
+        if (err){
+            console.log("oh dear")
+        } else {
+            console.log("balls written")
+        }
+    })
+}
 console.log("smh sequential stuff " + content)
 fs.readFile('system32', function(err,data){ 
     //callback requires (err,data) as documented, also system32 might be prank removed using Cat.remove()
@@ -96,7 +107,6 @@ fs.readFile('system32', function(err,data){
 console.log("KITTY IS WAITING FOR DATA TO BE READ part 1 UWUWUUWWU")
 
 //arrow function, used to eliminate the function keyword
-console.log("\nOMG ITS SO READBLE NOW LETS DO IT AGAIN")
 //also can be defined as 
 weed = (yes) => console.log(`SMOKE WEED EVERY ${yes}`)
 weed("HOUR")
@@ -110,3 +120,57 @@ fs.readFile('system32', (err,data) => {
     }
 })
 console.log("KITTY IS WAITING FOR DATA TO BE READ part 2UWUWUUWWU")
+setTimeout(() => {
+nyam = require('./necosfx') //calling the function nyam or nya will work
+console.log(nyam(true))
+console.log(nyam(false))
+}, 1000)
+
+//trying mapping again
+xi = require('./dwayne')
+dwayneTable = ["john xina", "xi gua jinping", "bing chilling"]
+console.log(xi.add("ident xi: "))
+//do not put return inside the ternary expression, but put it outside
+console.log(dwayneTable.map(element => {return (element == "john xina") ? xi.sub(element) : xi.add(element)}))
+test = (test, msg, callback) => {
+    if (test == 0){
+        try{
+            console.log("did you know that circus performers used to juggle balls? " + msg)
+            callback(new Error(msg))
+        } catch (Error){
+            console.log("how about another one?")
+            try{
+                callback(new Error(msg))
+            } catch (Error){
+                console.log("how about another one?")
+                try{
+                    callback(new Error(msg))
+                } catch (Error){
+                    console.log("how about another one?")
+                    try{
+                        callback(new Error(msg))
+                    } catch (Error){
+                        console.log("ITS TIME TO STOP")
+                    }
+                }
+            }
+        }
+        
+    }
+}
+test(0, "AHEM, TEST TEST TEST TEST", (err) => console.log(err))
+test(0, "EAT THIS!")
+var bob = {
+    bob: "object literal" //assignment operator doesnt work
+}
+console.log(bob.bob)
+//why do we need labels?
+c = 0
+yourNeck:
+while (true){
+    c += 1
+    console.log("haunt")
+    if (c == 3){
+        break yourNeck
+    }
+}
